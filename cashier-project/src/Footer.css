@@ -1,0 +1,20 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-color: rgb(190, 190, 190);
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    
+
+}
+.footer-left {
+    margin-top: 40px;
+    margin-left: 100px;
+}
+.footer-right {
+    margin-top: 40px;
+    margin-right: 30px;
+
+}
