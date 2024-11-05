@@ -13,7 +13,7 @@ function Item(props){
 
 export default function Shop(){
     const [products, setProducts]=useState([]);
-    const URL="http://localhost:3001";
+    const URL="http://localhost:3000";
     useEffect(()=>{
         axios.get(URL+'/api/products')
         .then(response=>{
