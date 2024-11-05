@@ -1,0 +1,182 @@
+body{
+    background-color: #cccccc;
+    
+}
+b {
+    font-size: larger;
+    font-weight: bold;
+}
+
+h3 {
+    padding: 5px 5px;
+}
+
+input {
+    width: 491px; /* กำหนดความกว้าง */
+    height: 50px; /* กำหนดความสูง */
+    margin-top: 5px;
+    font-size: 16px; /* กำหนดขนาดตัวอักษร */
+}
+
+.main {
+    padding: 15px 30px 15px 40px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap; /* ทำให้บรรทัดใหม่เมื่อเต็มแถว */
+    gap: 10px; /* กำหนดระยะห่างระหว่างปุ่ม */
+    max-width: 2000px; /* จำกัดความกว้างสูงสุดให้กับ container */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.button {
+    width: 300px;
+    height: 200px;
+    padding: 10px 20px;
+    background-color:white; /* สีพื้นหลังของปุ่ม */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column; /* จัดเรียงให้รูปอยู่ด้านบนและข้อความอยู่ด้านล่าง */
+    align-items: center; /* จัดให้เนื้อหาอยู่กึ่งกลาง */
+    justify-content: center; /* จัดให้เนื้อหาอยู่กึ่งกลาง */
+}
+.button img {
+    width: 250px;
+    height: 140px;
+    margin-bottom: 10px;
+}
+/* Optional: เปลี่ยนสีเมื่อเอาเมาส์ไปวางบนปุ่ม */
+.button:hover {
+    background-color: #249629;
+    color: white;
+}
+
+/* สไตล์สำหรับป๊อปอัป */
+.popup {
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    z-index: 20;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.sum{
+    width: 392px;
+    height: 33px;
+    border: solid 1px black; /* เส้นขอบสีดำ */
+    background-color: darkgray; /* สีพื้นหลัง */
+    padding: 5px 10px 5px 5px; /* เพิ่ม padding เพื่อให้ข้อความไม่ชิดขอบ */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    text-align: left;
+    margin-top: 5px;
+    justify-content:center; /* กึ่งกลางแนวตั้ง (ถ้าข้อความเกินบรรทัด) */
+}
+.itemText{
+    margin-top: 10px;
+    margin-bottom: 2.5px;
+}
+.priceText{
+    margin-top: 2.5px;
+}
+.form-buttons {
+    display: flex;
+    justify-content: right; 
+    margin-top: 15px;
+    gap: 5px;
+}
+.count_itemproduct input[type="number"]{
+    width: 390px;
+    height: 40px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+.form-buttons input[value="สั่งอาหาร"] {
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    color:white;
+    background-color: #249629;
+    border: none;
+}
+.form-buttons input[value="ยกเลิก"] {
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    color:white;
+    background-color:#706F6F;
+    border: none;
+    margin-left: 10px;
+}
+/* ตาราง รายการสิ้นที่ถูกเลือก */
+.grid-container1 {
+    display: grid;
+    grid-template-rows: 80px; /* 1 แถว */
+    grid-template-columns: 50px 300px 100px 150px ; /* 4 คอลัมน์ */
+    gap: 3px; /* ระยะห่างระหว่างช่อง */
+    justify-content: center; /* จัดกลางในแนวนอน */ 
+    padding-bottom: 3px;
+}
+.grid-container2 {
+    display: grid;
+    grid-template-rows: 80px ; /* 1 แถว */
+    grid-template-columns: 456px 150px; /* 2 คอลัมน์ */
+    gap: 3px; /* ระยะห่างระหว่างช่อง */
+    justify-content: center; /* จัดกลางในแนวนอน */
+}
+
+.grid-item {
+    background-color: white; /* สีพื้นหลัง */
+    color: rgb(0, 0, 0); /* สีตัวอักษร */
+    display: flex;
+    justify-content: center; /* จัดกึ่งกลางในแนวนอน */
+    align-items: center; /* จัดกึ่งกลางในแนวตั้ง */
+    font-size: 20px; /* ขนาดตัวอักษร */
+}
+.grid-container1 .grid-item:nth-child(n+1){
+    background-color: #68d4f8; /* purple */
+}
+.update-grid .grid-item:nth-child(n+1){
+    background-color: #ffffff; /* purple */
+}
+.grid-container2 .grid-item:nth-child(n+1){
+    background-color: #f87c7c; /* purple */
+}
+
+
+.checkbillbutton{
+
+    display: flex;
+    justify-content: left; /* จัดกึ่งกลางในแนวนอน */
+    align-items: center; /* จัดกึ่งกลางในแนวตั้ง */
+    font-size: 20px; /* ขนาดตัวอักษร */
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    color:white;
+    background-color: #249629;
+    border: none;
+    
+}
