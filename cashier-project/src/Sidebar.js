@@ -13,10 +13,6 @@ function Sidebar() {
           <span>หน้าหลัก/แคชเชียร์</span>
         </a>
         <a href="#" className="nav-item">
-          <img src="reservation.png" alt="Res Icon" />
-          <span>จองโต๊ะล่วงหน้า</span>
-        </a>
-        <a href="#" className="nav-item">
           <img src="Bill.png" alt="Bill Icon" />
           <span>รายการบิล</span>
         </a>
