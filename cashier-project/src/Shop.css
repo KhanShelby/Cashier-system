@@ -1,0 +1,19 @@
+.grid-container{
+    display : grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    background-color: azure;
+}
+.grid-container>div{
+    margin:10px;
+    background-color: white;
+    padding-top:10px;
+    color:black;
+    border-color:grey;
+    border-style: solid;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 5px 10px 8px #888888;
+ 
+}
+ 

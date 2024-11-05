@@ -10,6 +10,11 @@
     align-items: center;
     border-color: rgb(190, 190, 190);
     border: 200px;
+    text-decoration: none;
+    color: inherit;
+}
+.box:hover{
+    background-color: #0f9500;
 }
 .table {
     display: flex;
@@ -21,6 +26,7 @@
     border-color: rgb(190, 190, 190);
     background-color: #f1f1f1; /* สีพื้นหลังของตาราง (ถ้าต้องการ) */
 }
+
 
 .row{
     display: flex;
