@@ -1,5 +1,6 @@
 import React from 'react';
-//commit //check
+import './Sidebar.css';
+
 function Sidebar() {
   return (
     <div className="sidebar">

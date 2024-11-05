@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // นำเข้า Link
+import './Table.css';
 
 function Table() {
   const tableRows = [
@@ -13,9 +15,14 @@ function Table() {
       {tableRows.map((row, rowIndex) => (
         <div className="row" key={rowIndex}>
           {row.map((tableId) => (
-            <div className="box" id={tableId.toLowerCase()} key={tableId}>
+            <Link 
+              to={`/food/${tableId}`} // เส้นทางลิงก์ไปยังหน้าอาหารของแต่ละโต๊ะ
+              className="box" 
+              id={tableId.toLowerCase()} 
+              key={tableId}
+            >
               {tableId}
-            </div>
+            </Link>
           ))}
         </div>
       ))}

@@ -1,20 +1,13 @@
 import React from 'react';
-import Sidebar from './Sidebar';
-import Table from './Table';
-import Footer from './Footer';
-import './Footer.css';
-import './style.css';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Home';
 
-function App() {
+const App = () => {
   return (
-    <main>
-      <h1 className="h1">Cashier System</h1>
-      <h2 className="h2">ระบบแคชเชียร์ : กรุณาเลือกโต๊ะก่อนบันทึกรายการอาหาร</h2>
-      <Table />
-      <Sidebar />
-      <Footer />
-    </main>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
-}
+};
 
 export default App;
