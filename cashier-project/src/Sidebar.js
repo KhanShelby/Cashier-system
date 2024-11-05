@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
 function Sidebar() {
@@ -12,10 +13,10 @@ function Sidebar() {
           <img src="home.png" alt="Home Icon" />
           <span>หน้าหลัก/แคชเชียร์</span>
         </a>
-        <a href="#" className="nav-item">
+        <Link to="/Bill" className="nav-item">
           <img src="Bill.png" alt="Bill Icon" />
           <span>รายการบิล</span>
-        </a>
+        </Link>
         <a href="#" className="nav-item">
           <img src="leave.png" alt="Leave Icon" />
           <span>ออกจากระบบ</span>
