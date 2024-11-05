@@ -6,7 +6,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="logo">
-        <img src="logo.png" alt="Logo Icon" />
+        <img src="money.png" alt="Logo Icon" />
       </div>
       <nav className="nav-menu">
         <a href="#" className="nav-item">
