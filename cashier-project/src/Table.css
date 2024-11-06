@@ -1,6 +1,7 @@
-.box{
+/* การตกแต่ง .box */
+.box {
     display: flex;
-    background-color: rgb(16, 243, 16);
+    background-color: #16f316; /* สีเขียวอ่อน */
     height: 100px;
     width: 100px;
     font-size: 40px;
@@ -8,27 +9,75 @@
     border-radius: 20px;
     justify-content: center;
     align-items: center;
-    border-color: rgb(190, 190, 190);
-    border: 200px;
-    text-decoration: none;
-    color: inherit;
+    border: 2px solid #a0a0a0; /* ขอบบางๆ สีเทา */
+    color: white; /* เปลี่ยนข้อความให้เป็นสีขาว */
+    text-decoration: none; /* เอาเส้นใต้ลิงค์ออก */
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงอย่างราบรื่น */
 }
-.box:hover{
-    background-color: #0f9500;
+
+.box:hover {
+    background-color: #0f9500; /* สีเขียวเข้มขึ้นเมื่อ hover */
+    transform: scale(1.05); /* ขยายขนาดเล็กน้อยเมื่อ hover */
+    cursor: pointer; /* เปลี่ยน cursor เป็น pointer เพื่อแสดงให้เห็นว่าเป็นปุ่มที่คลิกได้ */
 }
+
+/* การตกแต่ง .table */
 .table {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 20px 1px; /* เพิ่ม Padding รอบตาราง */
-    border: 1px solid white; /* สร้างกรอบสีขาว */
-    border-radius: 10px; /* เพิ่มขอบโค้งให้กรอบ */
-    border-color: rgb(190, 190, 190);
-    background-color: #f1f1f1; /* สีพื้นหลังของตาราง (ถ้าต้องการ) */
+    gap: 20px; /* ระยะห่างระหว่างแถวในตาราง */
+    padding: 20px; /* เพิ่ม Padding รอบๆ ตาราง */
+    border: 1px solid #ccc; /* กรอบสีน้ำตาลอ่อน */
+    border-radius: 15px; /* ขอบโค้งมน */
+    background-color: #f9f9f9; /* พื้นหลังสีเทาอ่อน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ตาราง */
 }
 
-
-.row{
+/* การตกแต่ง .row */
+.row {
     display: flex;
     justify-content: space-evenly;
+    gap: 10px; /* เพิ่มระยะห่างระหว่างแถว */
 }
+
+/* เพิ่มการปรับแต่งปุ่มหรือกรอบภายใน .box */
+.box a {
+    color: inherit; /* ใช้สีตัวอักษรเดิม */
+    text-decoration: none; /* เอาเส้นใต้ลิงค์ออก */
+}
+/* Table.css */
+.table .box {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.table .box.available {
+    background-color: green;
+}
+
+.table .box.ordered {
+    background-color: orange;
+}
+
+.table .box.paid {
+    background-color: green;
+}
+.table {
+    transition: background-color 0.3s ease;
+}
+
+.table-ordered {
+    background-color: orange;
+}
+
+.table-paid {
+    background-color: green;
+}
+
+
+

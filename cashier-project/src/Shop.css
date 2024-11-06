@@ -1,19 +1,168 @@
-.grid-container{
-    display : grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
-    background-color: azure;
+/* Grid Layout for Products */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* ทำให้แต่ละช่องมีขนาดที่ยืดหยุ่น */
+    gap: 20px;  /* ระยะห่างระหว่าง item */
+    padding: 20px;
+    background-color: #f4f4f4;  /* เพิ่มสีพื้นหลัง */
 }
-.grid-container>div{
-    margin:10px;
-    background-color: white;
-    padding-top:10px;
-    color:black;
-    border-color:grey;
-    border-style: solid;
-    border-radius: 15px;
+
+/* Individual Product Item */
+.item {
+    border: 1px solid #ddd;
+    border-radius: 12px;  /* มุมโค้งที่ใหญ่ขึ้น */
+    padding: 15px;
     text-align: center;
-    box-shadow: 5px 10px 8px #888888;
- 
+    background-color: #ffffff;  /* พื้นหลังของสินค้า */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* เงาของสินค้า */
+    transition: transform 0.2s, box-shadow 0.2s;  /* เพิ่มการเปลี่ยนแปลงของเงา */
 }
- 
+
+/* Hover effect for item */
+.item:hover {
+    transform: scale(1.05);  /* ขยายขนาด */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);  /* เพิ่มเงาเมื่อ hover */
+}
+
+/* Image Style */
+.item-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;  /* มุมโค้งที่ใหญ่ขึ้น */
+    object-fit: cover;  /* ครอบภาพให้เต็มพื้นที่ */
+}
+
+/* Item details */
+.item-details {
+    margin-top: 15px;
+    font-family: 'Arial', sans-serif;  /* เปลี่ยนฟอนต์ */
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    background-color: #28a745;  /* สีเขียวสดใส */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;  /* ขนาดฟอนต์ใหญ่ขึ้น */
+    cursor: pointer;
+    width: 100%;  /* ทำให้ปุ่มกว้างเต็มพื้นที่ */
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;  /* เพิ่มการเปลี่ยนแปลงสีและการเคลื่อนไหว */
+}
+
+.add-to-cart:hover {
+    background-color: #218838;  /* สีเข้มขึ้นเมื่อ hover */
+    transform: translateY(-2px);  /* ปุ่มเลื่อนขึ้นเล็กน้อย */
+}
+
+/* Cart Container */
+.cart-container {
+    margin-top: 40px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h1 {
+    font-size: 24px;  /* ขนาดฟอนต์หัวข้อใหญ่ขึ้น */
+    color: #333;
+}
+
+.cart-container ol {
+    list-style: none;
+    padding: 0;
+}
+
+/* Clear Cart Button */
+.clear-cart {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.clear-cart:hover {
+    background-color: #c82333;  /* สีเข้มขึ้นเมื่อ hover */
+    transform: translateY(-2px);  /* ปุ่มเลื่อนขึ้นเล็กน้อย */
+}
+
+.cart-container h2 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #555;
+    font-weight: 600;
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+}
+
+.popup input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.popup-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.popup-button:hover {
+    background-color: #218838;
+}
+
+.popup .popup-button:last-child {
+    background-color: #dc3545;
+}
+
+.popup .popup-button:last-child:hover {
+    background-color: #c82333;
+}
+.checkout-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.checkout-button:hover {
+    background-color: #0056b3;
+}
+

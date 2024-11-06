@@ -1,6 +1,27 @@
-.head{
+  
+  .head {
     text-align: center;
-    margin-bottom: 35px;
-    
-}
-
+    margin-bottom: 30px;
+  }
+  
+  .head h1 {
+    font-size: 2.5em;
+    color: #6c5ce7; /* สีม่วงพาสเทล */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .head h2 {
+    font-size: 1.5em;
+    color: #f39c12; /* สีเหลืองพาสเทล */
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+ 
+  

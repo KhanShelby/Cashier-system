@@ -6,21 +6,17 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="logo">
-        <img src="logo.png" alt="Logo Icon" />
+        <img src="food1.jpg" alt="Logo Icon" className="logo-image" />
       </div>
       <nav className="nav-menu">
-        <a href="#" className="nav-item">
-          <img src="home.png" alt="Home Icon" />
+        <Link to="/" className="nav-item">
+          <img src="home.jpg" alt="Home Icon" className="nav-icon" />
           <span>หน้าหลัก/แคชเชียร์</span>
-        </a>
+        </Link>
         <Link to="/bill" className="nav-item">
-          <img src="Bill.png" alt="Bill Icon" />
+          <img src="bill.png" alt="Bill Icon" className="nav-icon" />
           <span>รายการบิล</span>
         </Link>
-      <Link to="/shop" className="nav-item">
-          <img src="leave.png" alt="Leave Icon" />
-          <span>ออกจากระบบ</span>
-      </Link>
       </nav>
     </div>
   );

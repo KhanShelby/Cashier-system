@@ -34,4 +34,4 @@ async function addProduct(name, price, img) {
 }
 
 // เรียกฟังก์ชันเพิ่มสินค้า
-addProduct('ผัดไทย', 50, 'padthai.jpg');
+addProduct('พิซซ่า', 100, 'pizza.jpg');

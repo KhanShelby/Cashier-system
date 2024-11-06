@@ -52,7 +52,7 @@ app.post('/api/products', async (req, res) => {
 });
 
 // เริ่มเซิร์ฟเวอร์
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3002;
 app.listen(port, () => {
   console.log('Listening on port', port);
 });

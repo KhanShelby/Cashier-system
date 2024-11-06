@@ -1,50 +1,88 @@
-.sidebar{
+/* กำหนดสีพื้นหลัง Sidebar */
+.sidebar {
     height: 100vh;
     width: 80px;
-    background-color: rgb(170, 170, 170);
+    background-color: #6C5B7B; /* สีม่วงอมเทา (Lavender) */
     display: flex;
     flex-direction: column;
     position: fixed;
     left: 0;
     top: 0;
-    
+    transition: width 0.3s ease; /* การเปลี่ยนแปลงขนาดเมื่อโฮเวอร์ */
 }
-.sidebar:hover {
-    width: 200px;
-    transition: 0.3s;
-}
-.sidebar:hover .nav-item span{
-    opacity: 1;
 
+/* ขยาย Sidebar เมื่อ Hover */
+.sidebar:hover {
+    width: 250px;
 }
-.logo img{
-    width: 60px;
+
+/* แสดงข้อความเมื่อ Hover */
+.sidebar:hover .nav-item span {
+    opacity: 1;
+}
+
+/* กำหนดขนาดของโลโก้ */
+.logo img {
+    width: 50px;
     margin: 20px 0;
     white-space: nowrap;
+    margin-left: 10px;
+    transition: width 0.3s ease; /* โลโก้เปลี่ยนขนาดเมื่อ Hover */
 }
-.nav-menu{
+
+/* กำหนดการจัดการเมนู */
+.nav-menu {
     display: flex;
     flex-direction: column;
     width: 100%;
     text-align: center;
 }
-.nav-item{
+
+/* เมนูไอเท็ม */
+.nav-item {
     display: flex;
     text-decoration: none;
     color: white;
     align-items: center;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     overflow: hidden;
     transition: all 0.3s ease;
+    border-radius: 12px; /* ขอบมนมากขึ้น */
 }
-.nav-item img{
+
+/* ขนาดของไอคอนในเมนู */
+.nav-item img {
     width: 30px;
     margin: 10px;
 }
-.nav-item span{
-    margin-left: 10px;
-    opacity: 0;
+
+/* ซ่อนข้อความในเมนู */
+.nav-item span {
+    margin-left: 15px;
+    opacity: 0; /* ซ่อนข้อความ */
     white-space: nowrap;
-    transition: opacity 0.3 ease;
+    transition: opacity 0.3s ease;
+}
+
+/* การเปลี่ยนแปลงสีเมื่อ Hover ที่เมนู */
+.nav-item:hover {
+    background-color: #FF7F50; /* สีส้มอมแดง (Coral) เมื่อ Hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+/* ขยายโลโก้เมื่อ Hover */
+.sidebar:hover .logo img {
+    width: 90px; /* ขยายโลโก้ */
+}
+
+/* การปรับพื้นหลัง Sidebar เป็นสีพาสเทล */
+.sidebar {
+    background-color: #D4A5A5; /* สีพาสเทล (Rose Quartz) */
+}
+
+/* เปลี่ยนสีพื้นหลังและข้อความของเมนูเมื่อ Hover */
+.nav-item:hover {
+    background-color: #F5A623; /* สีเหลืองพาสเทล */
+    color: #ffffff; /* ข้อความสีขาว */
 }

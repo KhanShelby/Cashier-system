@@ -1,20 +1,38 @@
+/* CSS สำหรับ Footer */
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    border-color: rgb(190, 190, 190);
-    border-style: solid;
-    background-color: rgb(255, 255, 255);
-    margin-top: 20px;
-    
+    align-items: center; /* จัดให้อยู่กึ่งกลางแนวนอน */
+    padding: 20px 50px; /* เพิ่ม padding ให้กว้างขึ้น */
+    border-top: 2px solid #ddd; /* เส้นขอบด้านบนสีเทา */
+    background-color: #f3f4f9; /* พื้นหลังสีพาสเทลอ่อน */
+    margin-top: 75px;
+    border-radius: 10px; /* เพิ่มขอบมนให้ดูนุ่มนวล */
 
 }
+
+.footer-left, .footer-right {
+    font-family: 'Roboto', sans-serif; /* ฟอนต์ให้ดูทันสมัย */
+}
+
 .footer-left {
-    margin-top: 40px;
-    margin-left: 100px;
+    color: #555; /* สีตัวอักษรเทาเข้ม */
+    font-size: 1.2em;
+    margin-left: 40px;
 }
-.footer-right {
-    margin-top: 40px;
-    margin-right: 30px;
 
+.footer-right {
+    text-align: right;
+    color: #555; /* สีตัวอักษรเทาเข้ม */
+    font-size: 1.2em;
+}
+
+.footer-left a, .footer-right a {
+    color: #6c5ce7; /* ลิงค์สีม่วงพาสเทล */
+    text-decoration: none; /* เอาเส้นใต้ลิงค์ออก */
+    transition: color 0.3s ease; /* เปลี่ยนสีเมื่อ hover */
+}
+
+.footer-left a:hover, .footer-right a:hover {
+    color: #f39c12; /* เปลี่ยนสีเมื่อ hover */
 }

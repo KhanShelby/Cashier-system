@@ -16,7 +16,7 @@ function Table() {
         <div className="row" key={rowIndex}>
           {row.map((tableId) => (
             <Link 
-              to={`/food/${tableId}`} // เส้นทางลิงก์ไปยังหน้าอาหารของแต่ละโต๊ะ
+              to={`/shop/${tableId}`} // เส้นทางลิงก์ไปยังหน้าอาหารของแต่ละโต๊ะ
               className="box" 
               id={tableId.toLowerCase()} 
               key={tableId}
