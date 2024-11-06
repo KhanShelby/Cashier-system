@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Shop.css';
 
@@ -23,6 +24,7 @@ export default function Shop({ tableId, updateTableStatus }) {
     const [amountPaid, setAmountPaid] = useState('');
     const [change, setChange] = useState(0);
     const URL = "http://localhost:3002";
+    const navigate = useNavigate();
 
     useEffect(() => {
         axios.get(URL + '/api/products')
@@ -71,10 +73,24 @@ export default function Shop({ tableId, updateTableStatus }) {
             setChange(changeAmount);
             setShowPopup(false);
             alert(`Payment successful! Change: ${changeAmount} Bath`);
-            setCart([]); // Clear the cart
-            localStorage.removeItem(`cart_${tableId}`); // Clear local storage for this table's cart
-            setAmountPaid(''); // Reset amount paid
-            updateTableStatus(tableId, 'paid'); // Change table status to 'paid' and color to green
+
+            // Save purchase history to localStorage
+            const newPurchase = {
+                items: cart,   // Use cart before clearing it
+                total: totalprice,
+                date: new Date().toLocaleString(),
+            };
+
+            const purchases = JSON.parse(localStorage.getItem('purchases')) || [];
+            purchases.push(newPurchase);  // Add the new purchase to the history
+            localStorage.setItem('purchases', JSON.stringify(purchases));  // Save to localStorage
+
+            setCart([]);  // Clear the cart
+            localStorage.removeItem(`cart_${tableId}`);  // Clear local storage for this table's cart
+            setAmountPaid('');  // Reset amount paid
+            updateTableStatus(tableId, 'paid');  // Change table status to 'paid' and color to green
+
+            navigate('/bill', { state: { items: cart, total: totalprice } });
         }
     }
 
