@@ -1,0 +1,89 @@
+.bill-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.bill-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bill-header h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.bill-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.bill-content {
+    margin-bottom: 20px;
+}
+
+.bill-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.bill-table th, .bill-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.bill-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.bill-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.bill-footer {
+    text-align: center;
+}
+
+.bill-footer h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.print-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.print-button:hover {
+    background-color: #45a049;
+}
+@media print {
+    body * {
+        visibility: hidden;  /* ซ่อนทุกอย่าง */
+    }
+    .bill-container, .bill-container * {
+        visibility: visible;  /* แสดงแค่ใบเสร็จ */
+    }
+    .bill-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+
